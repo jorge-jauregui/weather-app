@@ -1,4 +1,4 @@
-# Weather
+# Weather App
 
 Live version: https://weather-c2a92.web.app/
 
