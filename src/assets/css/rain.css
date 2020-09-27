@@ -1,0 +1,117 @@
+body{
+	margin:0;
+	padding:0;
+	width:100%;
+	height:100vh;
+	
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+
+div.clear{
+	width:100%;
+	height:100vh;
+	background-color: #485461;
+	background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+}
+
+div.droplet1{
+	position:relative;
+	left:50px;
+	top:-178px;
+	width: 3px;
+  	height: 6px;
+  	background: lightsteelblue;
+  	border-radius: 50%;
+
+}
+div.droplet2{
+	position:relative;
+	left:175px;
+	top:-134px;
+	width: 3px;
+  	height: 6px;
+  	background: lightsteelblue;
+  	border-radius: 50%;
+
+}
+div.droplet3{
+	position:relative;
+	left:220px;
+	top:-1890px;
+	width: 3px;
+  	height: 6px;
+  	background: lightsteelblue;
+  	border-radius: 50%;
+
+}
+div.droplet4{
+	position:relative;
+	left:300px;
+	top:-124px;
+	width: 3px;
+  	height: 6px;
+  	background: lightsteelblue;
+  	border-radius: 50%;
+
+}
+div.droplet5{
+	position:relative;
+	left:375px;
+	top:-186px;
+	width: 3px;
+  	height: 6px;
+  	background: lightsteelblue;
+  	border-radius: 50%;
+
+}
+div.droplet6{
+	position:relative;
+	left:500px;
+	top:-305px;
+	width: 3px;
+  	height: 6px;
+  	background: lightsteelblue;
+  	border-radius: 50%;
+
+}
+div.droplet7{
+	position:relative;
+	left:634px;
+	top:-200px;
+	width: 3px;
+  	height: 6px;
+  	background: lightsteelblue;
+  	border-radius: 50%;
+
+}
+div.droplet8{
+	position:relative;
+	left:1000px;
+	top:-260px;
+	width: 3px;
+  	height: 6px;
+  	background: lightsteelblue;
+  	border-radius: 50%;
+
+}
+div.droplet9{
+	position:relative;
+	left:1150px;
+	top:-154px;
+	width: 3px;
+  	height: 6px;
+  	background: lightsteelblue;
+  	border-radius: 50%;
+
+}
+div.droplet10{
+	position:relative;
+	left:1400px;
+	top:-189px;
+	width: 3px;
+  	height: 6px;
+  	background: lightsteelblue;
+  	border-radius: 50%;
+
+}

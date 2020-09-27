@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+body{
+	background-color:#011428;
+}
+
+/*
+NAVBAR
+*/
+
+nav.navbar{
+    background-color: transparent !important;
+    justify-content:center;
+	padding-top:20px;
+	padding-bottom:20px;
+}
+
+
+.form-control{
+    background-color: transparent !important;
+	border-radius:50px;
+	color:white;
+}
+
+::placeholder{
+	color:white;
+}
+
+.btn{
+	border-radius:30px;
+	border-color:white;
+	color:white;
+}
+
+img{
+	display:block;
+	margin:auto;
+}
+
+/*
+HEADER (TEMP AND CITY)
+*/
+
+div.weather-header{
+    padding-top:100px;
+    width:100%;
+}
+p.location{
+    font-size:25px;
+}
+p.current-temp{
+    font-size:50px;
+}
+/*
+WEATHER DETAILS
+*/
+
+div.weather-details{
+    padding-top:100px
+}
+
+
+div.row, p.text-center{
+    font-family: 'Lato', sans-serif;
+    color: white;
+}
+/*
+LANDING PAGE
+*/
+
+div.welcome{
+	width: 100%;
+	height:100%;
+	font-size:30px;
+	font-family: 'Lato', sans-serif;
+	padding-top:60px;
+	color:white;
+
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#011428), to(#032a54));
+
+}
+
+/* source for stars: https://dellsystem.me/posts/night-sky-css */
+.stars div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.stars .large { 
+	background: url('/assets/images/stars_large.png');
+	-moz-animation:move-twink-back 600s linear infinite;
+	-ms-animation:move-twink-back 600s linear infinite;
+	-o-animation:move-twink-back 600s linear infinite;
+	-webkit-animation:move-twink-back 600s linear infinite;
+	animation:move-twink-back 600s linear infinite;
+}
+
+.stars .medium { 
+	background: url('/assets/images/stars_medium.png');
+	-moz-animation:move-twink-back 600s linear infinite;
+	-ms-animation:move-twink-back 600s linear infinite;
+	-o-animation:move-twink-back 600s linear infinite;
+	-webkit-animation:move-twink-back 600s linear infinite;
+	animation:move-twink-back 600s linear infinite;
+
+}
+
+.stars .small {
+	background: url('/assets/images/stars_small.png');
+	-moz-animation:move-twink-back 600s linear infinite;
+	-ms-animation:move-twink-back 600s linear infinite;
+	-o-animation:move-twink-back 600s linear infinite;
+	-webkit-animation:move-twink-back 600s linear infinite;
+	animation:move-twink-back 600s linear infinite;
+}
+
+/*source for animation: http://www.script-tutorials.com/night-sky-with-twinkling-stars/ */
+@keyframes move-twink-back {
+	from {background-position:0 0;}
+	to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+from {background-position:0 0;}
+to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+from {background-position:0 0;}
+to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+from {background-position:0 0;}
+to {background-position:-10000px 5000px;}
+}
+
+/*
+CONDITIONAL ANIMATIONS
+*/
+
+body.clear{
+	width:100%;
+	height:100vh;
+	background-image: -khtml-gradient(linear, left top, left bottom, from(#011428), to(#032a54));
+}
+
+body.partly-cloudy{
+	width:100%;
+	height:100vh;
+	background: rgb(119,181,254);
+    background: linear-gradient(90deg, rgba(119,181,254,1) 35%, rgba(135,206,235,1) 100%);
+}
+body.sunny{
+	width:100%;
+	height:100vh;
+	background: rgb(119,181,254);
+    background: linear-gradient(90deg, rgba(119,181,254,1) 35%, rgba(135,206,235,1) 100%);
+}
+body.overcast{
+	width:100%;
+	height:100vh;
+	background-color: #637081;
+	background-image: linear-gradient(315deg, #637081 0%, #7c98b3 74%);
+}
+body.cloudy{
+	width:100%;
+	height:100vh;
+	background-color: #637081;
+	background-image: linear-gradient(315deg, #637081 0%, #7c98b3 74%);
+}
+body.haze{
+	width:100%;
+	height:100vh;
+	background-color: #637081;
+	background-image: linear-gradient(315deg, #637081 0%, #7c98b3 74%);
+}
+body.light-rain{
+	width:100%;
+	height:100vh;
+	background-color: #485461;
+	background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+}
+body.rain{
+	width:100%;
+	height:100vh;
+	background-color: #485461;
+	background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+}
+body.snow{
+	width:100%;
+	height:100vh;
+	background-color: #b8c6db;
+	background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+}
+
+
+
+div.droplet1{
+	position:relative;
+	top:30px;
+	left:10%;
+	width: 3px;
+  	height: 6px;
+  	background: lightsteelblue;
+	border-radius: 50%;
+	  
+	-webkit-animation: flying_two 2s infinite;
+  	animation: flying_two 2s infinite;
+	animation-timing-function: linear;
+
+	}
+	@keyframes flying_two {
+		from {top: -1%;}
+		to {top: 99%;}
+
+}
+div.droplet2{
+	position:relative;
+	left:26%;
+	top:-134px;
+	width: 3px;
+  	height: 6px;
+  	background: lightsteelblue;
+	border-radius: 50%;
+	  
+	-webkit-animation: flying_two 5s infinite;
+  	animation: flying_two 5s infinite;
+	animation-timing-function: linear;
+	}
+	@keyframes flying_two {
+		from {top: -1%;}
+		to {top: 99%;}
+	}
+	
+div.droplet3{
+	position:relative;
+	left:55%;
+	top:-1890px;
+	width: 3px;
+  	height: 6px;
+  	background: lightsteelblue;
+  	border-radius: 50%;
+
+	-webkit-animation: flying_two 4s infinite;
+  	animation: flying_two 4s infinite;
+	animation-timing-function: linear;
+	}
+	@keyframes flying_two {
+		from {top: -1%;}
+		to {top: 99%;}
+	}
+
+div.droplet4{
+	position:relative;
+	left:80%;
+	top:-124px;
+	width: 3px;
+  	height: 6px;
+  	background: lightsteelblue;
+  	border-radius: 50%;
+
+	-webkit-animation: flying_two 2.5s infinite;
+  	animation: flying_two 2.5s infinite;
+	animation-timing-function: linear;
+	}
+	@keyframes flying_two {
+		from {top: -1%;}
+		to {top: 99%;}
+	}
+
+div.droplet5{
+	position:absolute;
+	left:98%;
+	top:-486px;
+	width: 3px;
+  	height: 6px;
+  	background: lightsteelblue;
+	border-radius: 50%;
+	  
+	-webkit-animation: flying_two 3s infinite;
+  	animation: flying_two 3s infinite;
+	animation-timing-function: linear;
+	}
+	@keyframes flying_two {
+		from {top: -1%;}
+		to {top: 99%;}
+
+}
+.clouds div{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+.cloud1{
+	background: url('/assets/images/cloud1.svg') no-repeat;
+	left:9%;
+
+	-webkit-animation: hover1 12s infinite alternate;
+  	animation: hover1 12s infinite alternate;
+}
+		@keyframes hover1 {
+			from {left: -1%;}
+			to {left: 10%;}
+
+		}
+
+.cloud2{
+	background: url('/assets/images/cloud2.svg') no-repeat;
+	left:40%;
+	top: 10%;
+
+	-webkit-animation: hover2 9s infinite alternate;
+  	animation: hover2 9s infinite alternate;
+}
+		@keyframes hover2 {
+			from {left: 40%;}
+			to {left: 50%;}
+
+		}
+.cloud3{
+	background: url('/assets/images/cloud3.svg') no-repeat;
+	left:87%;
+
+	-webkit-animation: hover3 14s infinite alternate;
+  	animation: hover3 14s infinite alternate;
+}
+		@keyframes hover3 {
+			from {left: 87%;}
+			to {left: 94%;}
+
+		}
+/*
+MOBILE SETTINGS 
+*/
+
+@media screen and (max-width: 601px) {
+
+	button{
+		margin:auto;
+	}
+	nav.navbar{
+		padding-bottom:10px;
+	}
+	div.welcome{
+		padding-top:20px;
+	}
+	p.welcome{
+		font-size:25px;
+	}
+	img.welcome{
+		position:relative;
+		bottom:15%;
+		display:block;
+		margin:0 auto;
+		width:350px;
+	}
+	div.weather-header{
+		padding-top:12%;
+		padding-bottom:none;
+	}
+	p.current-temp{
+		font-size:35px;
+	}
+	p.location{
+		font-size:20px;
+	}
+	div.weather-details{
+		padding-left:5%;
+		padding-right:5%;
+		font-size:15px;
+	}
+}
+
+
+	
+
+
+
+
+
+
+
+
+
+

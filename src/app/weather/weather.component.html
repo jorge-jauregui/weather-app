@@ -1,0 +1,169 @@
+
+
+<body [ngClass]="{
+    'clear': this.weatherData?.current.weather_descriptions=='Clear',         
+    'sunny': this.weatherData?.current.weather_descriptions=='Sunny',
+    'partly-cloudy': this.weatherData?.current.weather_descriptions=='Partly cloudy',
+    'cloudy': this.weatherData?.current.weather_descriptions=='Cloudy',
+    'overcast': this.weatherData?.current.weather_descriptions=='Overcast',
+    'haze': this.weatherData?.current.weather_descriptions=='Haze',
+    'light-rain': this.weatherData?.current.weather_descriptions=='Light rain',
+    'rain': this.weatherData?.current.weather_descriptions=='Rain',
+    'snow': this.weatherData?.current.weather_descriptions=='Snow'
+}">
+
+<!----CLEAR -->
+    <div [ngClass]="{'stars': this.weatherData?.current.weather_descriptions=='Clear'}">
+        <div [ngClass]="{'large': this.weatherData?.current.weather_descriptions=='Clear'}"></div>
+        <div [ngClass]="{'medium': this.weatherData?.current.weather_descriptions=='Clear'}"></div>
+        <div [ngClass]="{'small': this.weatherData?.current.weather_descriptions=='Clear'}"></div>
+    </div>
+
+<!----RAIN -->
+    <div [ngClass]="{'droplet1': this.weatherData?.current.weather_descriptions=='Light Rain'}"></div>
+    <div [ngClass]="{'droplet2': this.weatherData?.current.weather_descriptions=='Light Rain'}"></div>
+    <div [ngClass]="{'droplet3': this.weatherData?.current.weather_descriptions=='Light Rain'}"></div>
+    <div [ngClass]="{'droplet4': this.weatherData?.current.weather_descriptions=='Light Rain'}"></div>
+    <div [ngClass]="{'droplet5': this.weatherData?.current.weather_descriptions=='Light Rain'}"></div>
+
+    <div [ngClass]="{'droplet1': this.weatherData?.current.weather_descriptions=='Rain'}"></div>
+    <div [ngClass]="{'droplet2': this.weatherData?.current.weather_descriptions=='Rain'}"></div>
+    <div [ngClass]="{'droplet3': this.weatherData?.current.weather_descriptions=='Rain'}"></div>
+    <div [ngClass]="{'droplet4': this.weatherData?.current.weather_descriptions=='Rain'}"></div>
+    <div [ngClass]="{'droplet5': this.weatherData?.current.weather_descriptions=='Rain'}"></div>
+
+    <div [ngClass]="{'droplet1': this.weatherData?.current.weather_descriptions=='Moderate rain'}"></div>
+    <div [ngClass]="{'droplet2': this.weatherData?.current.weather_descriptions=='Moderate rain'}"></div>
+    <div [ngClass]="{'droplet3': this.weatherData?.current.weather_descriptions=='Moderate rain'}"></div>
+    <div [ngClass]="{'droplet4': this.weatherData?.current.weather_descriptions=='Moderate rain'}"></div>
+    <div [ngClass]="{'droplet5': this.weatherData?.current.weather_descriptions=='Moderate rain'}"></div>
+
+    <div [ngClass]="{'droplet1': this.weatherData?.current.weather_descriptions=='Light Rain Shower'}"></div>
+    <div [ngClass]="{'droplet2': this.weatherData?.current.weather_descriptions=='Light Rain Shower'}"></div>
+    <div [ngClass]="{'droplet3': this.weatherData?.current.weather_descriptions=='Light Rain Shower'}"></div>
+    <div [ngClass]="{'droplet4': this.weatherData?.current.weather_descriptions=='Light Rain Shower'}"></div>
+    <div [ngClass]="{'droplet5': this.weatherData?.current.weather_descriptions=='Light Rain Shower'}"></div>
+
+    <!----PARTLY CLOUDY -->
+    <div [ngClass]="{'clouds': this.weatherData?.current.weather_descriptions=='Partly cloudy'}">
+        <div [ngClass]="{'cloud1': this.weatherData?.current.weather_descriptions=='Partly cloudy'}"></div>
+        <div [ngClass]="{'cloud2': this.weatherData?.current.weather_descriptions=='Partly cloudy'}"></div>
+        <div [ngClass]="{'cloud3': this.weatherData?.current.weather_descriptions=='Partly cloudy'}"></div>
+    </div>
+    <div [ngClass]="{'clouds': this.weatherData?.current.weather_descriptions=='Cloudy'}">
+        <div [ngClass]="{'cloud1': this.weatherData?.current.weather_descriptions=='Cloudy'}"></div>
+        <div [ngClass]="{'cloud2': this.weatherData?.current.weather_descriptions=='Cloudy'}"></div>
+        <div [ngClass]="{'cloud3': this.weatherData?.current.weather_descriptions=='Cloudy'}"></div>
+    </div>
+    <!----OVERCAST -->
+    <div [ngClass]="{'clouds': this.weatherData?.current.weather_descriptions=='Overcast'}">
+        <div [ngClass]="{'cloud1': this.weatherData?.current.weather_descriptions=='Overcast'}"></div>
+        <div [ngClass]="{'cloud2': this.weatherData?.current.weather_descriptions=='Overcast'}"></div>
+        <div [ngClass]="{'cloud3': this.weatherData?.current.weather_descriptions=='Overcast'}"></div>
+    </div>
+
+
+<!----NAVIGATION BAR-->
+    <nav class="navbar">
+        <form class="form-inline"
+            [formGroup]="weatherSearchForm"
+            (ngSubmit)="sendToAPIXU(weatherSearchForm.value)"
+            autocomplete="off"
+        >
+        <input
+            class="form-control mr-sm-2"
+            type="text"
+            id="weatherLocation"
+            aria-describedby="weatherLocation"
+            placeholder="Search City"
+            formControlName="location" 
+            autocomplete="off"
+        />
+        <button type="submit" 
+            class="btn btn btn-outline-secondary my-2 my-sm-0"
+            (click)="userSearchFunction(); welcomeDivFunction()">
+            Search
+        </button>
+        </form>
+    </nav>
+<!----LANDING PAGE (IS REMOVED ON USER SEARCH)-->
+    <div class="welcome text-center" *ngIf="welcomediv">
+        <div class="stars">
+            <div class="large"></div>
+            <div class="medium"></div>
+            <div class="small"></div>
+        </div>
+        <p class="welcome">Welcome! </p>
+        <p class="welcome">Search your city for current weather conditions.</p>
+        <img class="welcome" src="/assets/images/logo.svg" height="70%"/>
+    </div>
+
+<!----DATA HEADER--->
+    <div class="weather-header">
+        <p class="text-center current-temp">
+            {{ this.weatherData?.current.temperature }} &#176;F
+        </p>
+        <p class="text-center location">
+            {{ this.weatherData?.location.name }}, 
+            {{ this.weatherData?.location.country }}
+        </p>
+        <p class="text-center local-time">
+            {{ this.weatherData?.location.localtime }} (Local Time)
+        </p>
+    </div>
+
+<!----DATA TABLE--->
+    <div class="weather-details">
+        <div class="row">
+            <div class="col">
+                <p class="text-center">
+                    Current conditions: {{ this.weatherData?.current.weather_descriptions }}
+                </p>
+            </div>
+            <div class="col">
+                <p class="text-center">
+                    Feels like: {{ this.weatherData?.current.feelslike }} &#176;F
+                </p>
+            </div>
+            <div class="col">
+                <p class="text-center">
+                    Wind Speed: {{ this.weatherData?.current.wind_speed }} mph {{this.weatherData?.current.wind_dir }}
+                </p>
+            </div>
+            <div class="w-100"></div>
+            <div class="col">
+                <p class="text-center">
+                    Precipitation: {{ this.weatherData?.current.precip }} mm
+                </p> 
+            </div>
+            <div class="col">
+                <p class="text-center">
+                    Humidity: {{ this.weatherData?.current.humidity }}%
+                </p> 
+            </div>
+            <div class="col">
+                <p class="text-center">
+                    UV Index: {{ this.weatherData?.current.uv_index }}
+                    <span class="uv-index" *ngIf="this.weatherData?.current.uv_index<=2">
+                        (Low)
+                    </span> 
+                    <span class="uv-index" *ngIf="this.weatherData?.current.uv_index >= 3 && this.weatherData?.current.uv_index <=5">
+                        (Moderate)
+                    </span> 
+                    <span class="uv-index" *ngIf="this.weatherData?.current.uv_index >= 6 && this.weatherData?.current.uv_index <=7">
+                        (High)
+                    </span> 
+                    <span class="uv-index" *ngIf="this.weatherData?.current.uv_index >=8 && this.weatherData?.current.uv_index <=10">
+                        (Very High)
+                    </span>
+                    <span class="uv-index" *ngIf="this.weatherData?.current.uv_index>=11">
+                        (Extreme)
+                    </span>
+                </p> 
+            </div>
+        </div>
+    </div>
+
+</body>
+
+

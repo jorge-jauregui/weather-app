@@ -1,0 +1,18 @@
+{
+
+  "hosting": {
+    "site":"weather-c2a92",
+    "public": "dist/weather",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
