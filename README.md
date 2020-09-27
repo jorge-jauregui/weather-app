@@ -1,5 +1,7 @@
 # Weather
 
+Live version: https://weather-c2a92.web.app/
+
 This is my first ever project using Angular 2+. Search for your city using the search bar to get live weather data (i.e. humidity, wind speed, uv index). Weather themed animations will run depending on the weather condition. This project was made two months ago, but I just uploaded it to github. Definitely lots room to improve code.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
