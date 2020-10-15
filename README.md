@@ -9,7 +9,7 @@ If you run this in your computer, note that you will need to obtain an API key f
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
 
 # Overview
-## Live version of application: https://weather-c2a92.web.app/
+Live version of application: https://weather-c2a92.web.app/
 
 ## Landing page
 ![1](https://user-images.githubusercontent.com/62124046/96059637-57965600-0e43-11eb-9281-92efea712e2e.png)
