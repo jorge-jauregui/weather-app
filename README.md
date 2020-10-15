@@ -8,6 +8,22 @@ If you run this in your computer, note that you will need to obtain an API key f
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
 
+# Overview
+## Live version of application: https://weather-c2a92.web.app/
+
+## Landing page
+![1](https://user-images.githubusercontent.com/62124046/96059637-57965600-0e43-11eb-9281-92efea712e2e.png)
+
+## Overcast conditions in Chicago, Illinois
+![2](https://user-images.githubusercontent.com/62124046/96059639-58c78300-0e43-11eb-8bba-c69193f3f40a.png)
+
+## Partly cloudy conditions in Porland, Oregon
+![3](https://user-images.githubusercontent.com/62124046/96059643-59f8b000-0e43-11eb-84b6-819f17ad5604.png)
+
+## Clear night conditions in Amsterdam, Netherlands
+![4](https://user-images.githubusercontent.com/62124046/96059644-5a914680-0e43-11eb-9a66-fe169fc1eda1.png)
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
